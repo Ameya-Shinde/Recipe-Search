@@ -19,20 +19,49 @@ body {
 }
 
 nav {
-    height: 7%;
+    min-height: max-content !important;
     padding: 0 1rem;
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
-    gap: 2rem;
     align-items: center;
+    gap: 2rem;
     font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
-    border: 1px solid rgba(34,36,38,.15);
-    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    border: 1px solid rgba(34, 36, 38, .15);
+    box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
+    padding: .5rem;
 }
 
-@media screen and (max-width: 320px){
-    nav{
-        gap: 0rem;
+.logoContainer {
+    min-height: max-content !important;
+    min-width: max-content;
+}
+
+.btns {
+    display: flex;
+    min-width: max-content;
+    height: 100%;
+}
+
+.btns button {
+    border: none;
+    height: 100% !important;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: rgba(225, 225, 225, 0.539) !important;
+}
+
+.btns button:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+@media screen and (max-width: 320px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
         justify-content: space-between;
     }
 
@@ -40,26 +69,11 @@ nav {
         padding: 0 0.5rem !important;
     }
 
-}
+    .btns {
+        width: 80%;
+        flex-direction: column;
+    }
 
-.btns {
-    display: flex;
-    height: 100%;
-}
-
-.btns button {
-    border: none;
-    height: 100% !important;
-    padding: 0 1rem;
-    background-color: transparent;
-}
-
-.selected{
-    background-color: rgba(225, 225, 225, 0.539) !important;
-}
-
-.btns button:hover {
-    background-color: rgb(225, 225, 225);
 }
 
 .search-heading {
@@ -71,13 +85,13 @@ nav {
     text-align: center;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
-    font-family: Courgette,cursive;
+    font-family: Courgette, cursive;
     margin-bottom: 1rem;
 }
 
-main{
+main {
     /* border: 2px solid red; */
     width: 80%;
     margin: auto;
@@ -87,20 +101,20 @@ main{
     align-items: center;
 }
 
-.input{
+.input {
     width: 60%;
     display: flex;
-    margin-bottom: 1rem ;
+    margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 426px){
-    .input{
+@media screen and (max-width: 426px) {
+    .input {
         width: 100%;
     }
 
 }
 
-#search-value{
+#search-value {
     width: 100%;
     padding: .5rem .5rem;
     background-color: transparent;
@@ -109,10 +123,10 @@ main{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     outline: none;
-    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
 }
 
-#search-icon{
+#search-icon {
     width: 10%;
     background-color: #2185d0;
     color: #fff;
@@ -121,13 +135,13 @@ main{
     border-bottom-right-radius: 5px;
 }
 
-@media screen and (max-width: 426px){
-    #search-icon{
+@media screen and (max-width: 426px) {
+    #search-icon {
         width: 20% !important;
     }
 }
 
-#cards-container{
+#cards-container {
     width: 90%;
     margin: auto;
     display: flex;
@@ -138,7 +152,7 @@ main{
     margin-bottom: 2rem;
 }
 
-.recipe-card{
+.recipe-card {
     max-width: 100%;
     min-width: 0;
     width: 250px;
@@ -152,17 +166,17 @@ main{
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
 
-.recipe-img{
+.recipe-img {
     width: 100%;
     height: 55%;
 }
 
-.recipe-img img{
+.recipe-img img {
     width: 100%;
     height: 100%;
 }
 
-.content{
+.content {
     height: 30%;
     display: flex;
     flex-direction: column;
@@ -170,20 +184,20 @@ main{
     padding: 8px;
 }
 
-.recipe-name{
+.recipe-name {
     font-size: 1.1em;
     line-height: 1.28571429em;
-    color: rgba(0,0,0,.85);
-    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
+    color: rgba(0, 0, 0, .85);
+    font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
 }
 
-.publisher{
+.publisher {
     font-size: 1.1rem;
-    font-family: Courgette,cursive!important;
+    font-family: Courgette, cursive !important;
     color: #b69811;
 }
 
-.card-buttons{
+.card-buttons {
     height: 10%;
     display: flex;
     align-items: center;
@@ -191,7 +205,7 @@ main{
     gap: .5rem;
 }
 
-.card-buttons button{
+.card-buttons button {
     padding: 7px;
     border-radius: 5px;
     border: none;
@@ -199,16 +213,16 @@ main{
     font-weight: 700;
 }
 
-#recipe-details-btn{
+#recipe-details-btn {
     background-color: #2185d0;
     color: #fff;
     cursor: pointer;
 }
 
-#recipe-url-btn{
+#recipe-url-btn {
     background-color: #21ba45;
 }
 
-#recipe-url-btn a{
+#recipe-url-btn a {
     color: white;
 }
