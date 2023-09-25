@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script defer src="search.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logoContainer">
+            <a href="index.html">
+                <img src="https://food2forks.netlify.app/static/media/logo.cc3fff7e.svg" alt="logo">
+            </a>
+        </div>
+        <div class="btns">
+            <button><a href="index.html">Home</a></button>
+            <button class="selected"><a href="">Recipes</a></button>
+        </div>
+    </nav>
+
+    <main>
+        <h2 class="search-heading">Search Recipes With <span style="color: rgb(255, 51, 51);">Food 2 Fork</span></h2>
+        <h3>List of all searchable items -> <a style="color: red;" target="_blank" href="http://forkify-api.herokuapp.com/phrases.html">here</a></h3>
+        <div class="input">
+            <input id="search-value" placeholder="e.g: chicken" type="text">
+            <button id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <h3>RECIPE LIST <span style="color: rgb(255, 51, 51);" id="sName"></span></h3>
+
+        <div id="cards-container">
+
+        </div>
+    </main>
+</body>
+
+</html>

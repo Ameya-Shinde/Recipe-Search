@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="details.css">
+    <script defer src="details.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logoContainer">
+            <a href="index.html">
+                <img src="https://food2forks.netlify.app/static/media/logo.cc3fff7e.svg" alt="logo">
+            </a>
+        </div>
+        <div class="btns">
+            <button><a href="index.html">Home</a></button>
+            <button class="selected"><a href="search.html">Recipes</a></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="details-left">
+            <button><a href="search.html">Back to recipe search</a></button>
+            <div class="img-container">
+                <img id="dish-img" src="" alt="Dish Image">
+            </div>
+        </div>
+
+        <div class="details-right">
+            <h3 id="name" class="recipe-name"></h3>
+            <h5 id="provider" class="publisher">Closet</h5>
+            <div class="card-buttons">
+                <button id="recipe-details-btn"><a id="publi-webpage" href="" target="_blank">Publisher Webpage</a></button>
+                <button id="recipe-url-btn"><a id="recipe-url" href="" target="_blank">Recipe URL</a></button>
+            </div>
+            <h2 class="iHeading">Ingredients</h2>
+            <div id="iList">
+                <div class="items">8 slices bacon</div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
